@@ -3,6 +3,7 @@ const { notes } = require('../db/db.json');
 const { createNewNote, validateNote } = require('./../db/store');
 
 
+
 router.get('/notes', (req, res) => {
     let results = notes;
     if (results) {
@@ -21,5 +22,7 @@ router.post("/notes", (req, res) => {
          res.json(note);
     }
 });
+
+
 
 module.exports = router;
